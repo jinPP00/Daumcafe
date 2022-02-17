@@ -45,7 +45,7 @@ browser.switch_to.default_content() # 제일 바깥으로 빠져나옴.
 time.sleep(3)
 browser.switch_to.frame(browser.find_element_by_css_selector("#down")) # 프레임 전환
 time.sleep(3)
-browser.find_element_by_xpath('//*[@id="primaryContent"]/div/div[5]/div[2]/button').click()
+browser.find_element_by_xpath('//*[@id="primaryContent"]/div/div[5]/div[2]/button').send_keys(Keys.ENTER)
 # browser.find_element_by_css_selector("button.btn_g.full_type1").click()
 time.sleep(3)
 browser.close()
