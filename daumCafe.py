@@ -1,6 +1,7 @@
 from selenium import webdriver
 import time
 import chromedriver_autoinstaller # 터미널 창에 pip install chromedriver_autoinstaller 입력하여 모듈 설치!
+from selenium.webdriver.common.keys import Keys
 
 # chromedriver_autoinstaller 를 사용하여 코드를 아래처럼 작성하면,
 # 굳이 chromedriver 파일을 별도로 다운로드 받지 않아도 됩니다.
