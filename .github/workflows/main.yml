@@ -20,3 +20,5 @@ jobs:
       run : pip install -r requirements.txt
     - name: 5. 파이썬 파일 실행!!
       run: python 'test.py'
+    - name: 6. 파이썬 파일 실행!!
+      run: python 'daumCafe.py'
