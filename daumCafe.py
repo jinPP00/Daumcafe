@@ -41,7 +41,9 @@ content = browser.find_element_by_css_selector("#tinymce")
 content.send_keys("반갑습니다.")
 # 발행 버튼 클릭
 browser.switch_to.default_content() # 제일 바깥으로 빠져나옴.
+time.sleep(3)
 browser.switch_to.frame(browser.find_element_by_css_selector("#down")) # 프레임 전환
+time.sleep(3)
 browser.find_element_by_css_selector("button.btn_g.full_type1").click()
 time.sleep(3)
 browser.close()
