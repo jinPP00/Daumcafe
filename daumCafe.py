@@ -5,8 +5,17 @@ import chromedriver_autoinstaller # 터미널 창에 pip install chromedriver_au
 # chromedriver_autoinstaller 를 사용하여 코드를 아래처럼 작성하면,
 # 굳이 chromedriver 파일을 별도로 다운로드 받지 않아도 됩니다.
 # browser = webdriver.Chrome("./chromedriver") # 삭제
+
 chrome_path = chromedriver_autoinstaller.install() # 추가
-browser = webdriver.Chrome(chrome_path) # 추가
+# browser = webdriver.Chrome(chrome_path) # 추가
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--headless')               # headless
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
+chrome_options.add_argument('--disable-gpu')
+browser = webdriver.Chrome(chrome_path, options=chrome_options)
+
 browser.get("https://logins.daum.net/accounts/signinform.do?url=https%3A%2F%2Fwww.daum.net%2F")
 id = browser.find_element_by_css_selector("#id")
 id.send_keys("talingpython")
