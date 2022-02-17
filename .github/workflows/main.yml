@@ -19,4 +19,4 @@ jobs:
     - name : 4. 패키지 스톨
       run : pip install -r requirements.txt
     - name: 5. 파이썬 파일 실행!!
-      run: python 'test2.py'
+      run: python 'test.py'
